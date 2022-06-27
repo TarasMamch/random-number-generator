@@ -9,9 +9,10 @@ var passcode = [null]
 
 function generatePassword() {
   lowerCaseLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-  var loopCounter = ("0")
+  var loopCounter = (0)
+  passcode = [null]
   var characterCount = prompt("How Many Characters Do You Want For Your Password?");
-  if (characterCount > 8 && characterCount < 128) {
+  if (characterCount > 7 && characterCount < 127) {
     if (confirm("Do You Want Your Password To Have Uppercase Letters?")) {
       lowerCaseLetters = lowerCaseLetters.concat(upperCaseLetters)
       if (confirm("Do You Want Your Password To Have Numbers?")) {
@@ -37,17 +38,15 @@ function generatePassword() {
         }
       }
     }
-  } else if (characterCount == null) {
-  } else if (characterCount < 8) {
+  } else if (characterCount < 7) {
     alert("Must Have at Least 8 Characters")
     generatePassword()
-  } else if (characterCount > 128) {
+  } else if (characterCount > 127) {
     alert("Must Have a Maximum of 128 Characters")
     generatePassword()
-  } else {
-    alert("Input Not Valid")
-    generatePassword()
-  } while (loopCounter < characterCount) {
+  }
+
+  while (loopCounter < characterCount) {
     passcode.push(lowerCaseLetters[Math.floor(Math.random() * lowerCaseLetters.length)]);
     loopCounter++;
   } passcode = passcode.join('')
