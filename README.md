@@ -1,5 +1,5 @@
 # random-number-generator
-![image](./Develop/images/Screenshot%202022-06-27%20130756.png)
+![image](./assets/images/Screenshot%202022-06-27%20130756.png)
 
 ## Description
 This is my randow password generator. When you click to generate a password it will ask how many characters do you want your password to be and if you want to include capital letters, numbers, and special characters.
